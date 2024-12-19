@@ -1,17 +1,54 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/homepage";
+import HomePage from "./pages/Homepage";
 import PageNotFound from "./pages/PageNotFound";
-import Pricing from "./pages/pricing";
-import Product from "./pages/product";
+import Pricing from "./pages/Pricing";
+import Product from "./pages/Product";
+import Login from "./pages/Login";
+import AppLayout from "./pages/AppLayout";
+import CityList from "./components/CityList";
+import { useState, useEffect } from "react";
+const BASE_URL = "http://localhost:3001/";
 
 function App() {
+  const [cities, setCities] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(function () {
+    async function fetchData() {
+      setIsLoading(true);
+      try {
+        const response = await fetch(`${BASE_URL}cities`);
+        const data = await response.json();
+        setCities(data);
+      } catch {
+        alert("There is an error fetxching the data");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+  console.log(cities, "start");
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="product" element={<Product />} />
+          <Route path="login" element={<Login />} />
+          <Route path="app" element={<AppLayout />}>
+            <Route
+              index
+              element={<CityList cities={cities} isLoading={isLoading} />}
+            />
+            <Route
+              path="cities"
+              element={<CityList cities={cities} isLoading={isLoading} />}
+            />
+            <Route path="countries" element={<p>countries</p>} />
+            <Route path="form" element={<p>form</p>} />
+          </Route>
+
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
