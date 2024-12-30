@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -22,19 +10,67 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "id": "48e7",
+      "cityName": "Bourg-des-Maisons",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-12-30T17:18:11.611Z",
+      "notes": "hello",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
+        "lat": "45.347618779564",
+        "lng": "0.42297363281250006"
+      }
+    },
+    {
+      "id": "c466",
+      "cityName": "Allepuz",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-12-30T17:18:20.901Z",
+      "notes": "hi",
+      "position": {
+        "lat": "40.50490708654718",
+        "lng": "-0.703125"
+      }
+    },
+    {
+      "id": "adaa",
+      "cityName": "Pyay",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2024-12-30T17:18:37.599Z",
+      "notes": "",
+      "position": {
+        "lat": "18.81636141590308",
+        "lng": "95.27343750000001"
+      }
+    },
+    {
+      "id": "2b69",
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2024-12-30T17:19:19.490Z",
+      "notes": "",
+      "position": {
+        "lat": "13.71954038330732",
+        "lng": "100.53039550781251"
+      }
+    },
+    {
+      "id": "159f",
+      "cityName": "Tanintharyi",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2024-12-30T19:35:05.616Z",
+      "notes": "dd",
+      "position": {
+        "lat": "13.148738684123515",
+        "lng": "99.03076171875001"
+      }
     }
   ]
 }
